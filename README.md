@@ -36,7 +36,14 @@ There is a rate limit of **100 requests per minute**, per IP address. Exceeding 
 ## CodePen Examples <!-- omit in toc -->
 
 - [Single Quote](https://codepen.io/statistron/pen/JjmRbyL)
+
+[<img src="assets/screenshot_single_quote_15-50-54.png"  width="700" height="200">](https://codepen.io/statistron/pen/JjmRbyL)
+
 - [Bulk Quotes](https://codepen.io/statistron/pen/KKGgNXM)
+
+[<img src="assets/screenshot_bulk_quotes_15-40-11.png"  width="700" height="750">](https://codepen.io/statistron/pen/KKGgNXM)
+
+
 
 <br>
 
@@ -72,6 +79,7 @@ Returns *one* random quote from the database as a single JSON object.
 
 
 <br>
+
 
 ---
 
