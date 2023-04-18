@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- saved from url=(0105)http://54.148.210.209/swiper1/animated/dist/plainhtmlquoteloadjsonfromapigatewayopensearch_oneresult.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Wikistats Single Quote Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+ <link rel="stylesheet" href="./Wikistats_Single_Quote_Demo_files/water.css">
+
+
+
+<style>body{background-color:#000}.quote{margin:0;background:#eee;padding:1em;border-radius:1em}.quote figcaption,.quote blockquote{margin:1em}.quote cite{font-size:10px}</style>
+<script></script>
+ 
+
+
+  </head>
+
+  <body>
+
+
+    <button>Refresh Quote
+    <div id="plain">
+   
+    </div>
+
+
+
+    <script>
+      
+document.addEventListener("DOMContentLoaded", () => {
+  const button = document.querySelector("button");
+
+  async function refreshQuote() {
+    //Fetching one random quote
+    // https://github.com/statistron/wikistats
+    var url = "https://api.statistron.xyz/v1/wikistats?q=random";
+    fetch(url)
+      .then((response) => response.json())
+      .then((jsonstat) => {
+        console.log(jsonstat);
+
+        //Check if div quote exists, if it does, remove it to display the next set of quotes
+
+        var isdivquote = document.getElementsByClassName("div-quote");
+        if (isdivquote.length > 0) {
+          document.querySelectorAll(".div-quote").forEach((el) => el.remove());
+        }
+
+        // loop through the objects in the response array
+
+        var div = document.createElement("div");
+
+        div.className = "div-quote";
+
+        div.innerHTML =
+          '<figure class="quote"><blockquote>' +
+          jsonstat.quote +
+          "</blockquote><figcaption> &mdash;<cite>" +
+          jsonstat.source +
+          "</cite>  </figcaption></figure> <br>";
+
+        document.body.appendChild(div);
+      });
+  }
+  button.addEventListener("click", refreshQuote);
+
+  // call refreshQuote
+  refreshQuote();
+});
+
+
+    </script>
+  
+
+</button><div class="div-quote"><figure class="quote"><blockquote>The average passing percentage for the HKCEE and HKALE is higher than 90%.</blockquote><figcaption> —<cite>Shatin Pui Ying College | Wikipedia</cite>  </figcaption></figure> <br></div></body></html>
