@@ -33,19 +33,15 @@ There is a rate limit of **100 requests per minute**, per IP address. Exceeding 
 
 ## API Reference <!-- omit in toc -->
 
-- [Get Random Quote](#get-random-quote)
-- [Get Random Quotes (bulk)](#get-random-quotes-bulk)
+- [Get Random Quotes](#get-random-quotes)
 - [Search Quotes (beta)](#search-quotes-beta)
 
 <br>
 
 ## CodePen Examples <!-- omit in toc -->
 
-- [Single Quote](https://codepen.io/statistron/pen/JjmRbyL)
 
-[<img src="assets/screenshot_single_quote_15-50-54.png"  width="700" height="200">](https://codepen.io/statistron/pen/JjmRbyL)
-
-- [Bulk Quotes](https://codepen.io/statistron/pen/KKGgNXM)
+- [Random Quotes](https://codepen.io/statistron/pen/KKGgNXM)
 
 [<img src="assets/screenshot_bulk_quotes_15-40-11.png"  width="700" height="750">](https://codepen.io/statistron/pen/KKGgNXM)
 
@@ -53,16 +49,17 @@ There is a rate limit of **100 requests per minute**, per IP address. Exceeding 
 
 <br>
 
-## Get Random Quote
+## Get Random Quote(s)
 
 ```HTTP
-GET /?q=random
+GET /?q=random&limit=your_integer_value
 ```
 
-Returns *one* random quote from the database as a single JSON object.
+Returns one or more random quote(s) from the database as an array of JSON objects.  You must specify the limit parameter e.g., 1, 10, etc.
                                    
+<br>
 
-**Response**
+**Sample response for one quote**
 
 ```ts
 {
@@ -77,7 +74,7 @@ Returns *one* random quote from the database as a single JSON object.
 ```
 <br>
 
-[Try it in your browser](https://api.statistron.xyz/v1/wikistats?q=random)
+[Try it in your browser](https://api.statistron.xyz/v1/wikistats?q=random&limit=1)
 
 <br>
 
@@ -91,13 +88,8 @@ Returns *one* random quote from the database as a single JSON object.
 
 <br>
 
-## Get Random Quotes (bulk)
+**Sample response for 10 quotes**
 
-```HTTP
-GET /?q=bulk
-```
-
-Get 10 random quotes at once from the database.  This will return an *array* of quote objects.  
 
 
 **Response**
@@ -137,11 +129,8 @@ Get 10 random quotes at once from the database.  This will return an *array* of 
 
 
 
-**Examples**
 
-<br>
-
-[Try it in your browser](https://api.statistron.xyz/v1/wikistats?q=bulk)
+[Try it in your browser](https://api.statistron.xyz/v1/wikistats?q=random&limit=10)
 
 <br>
 
@@ -198,6 +187,6 @@ Results:
 
 ---
 
-### Acknowledgement
+### Credits
 
 Inspired by popular quote APIs such as [Quotable](https://github.com/lukePeavey/quotable) and [Animechan](https://github.com/rocktimsaikia/anime-chan)
