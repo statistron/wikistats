@@ -25,6 +25,12 @@ There is a rate limit of **100 requests per minute**, per IP address. Exceeding 
 
 <br>
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/26982513-8fb164dd-eebf-441a-99ff-21ea675410b4?action=collection%2Ffork&collection-url=entityId%3D26982513-8fb164dd-eebf-441a-99ff-21ea675410b4%26entityType%3Dcollection%26workspaceId%3Da547849a-d103-4bad-aaa7-00ff8e0dd146)
+
+<br>
+
+
+
 ## API Reference <!-- omit in toc -->
 
 - [Get Random Quote](#get-random-quote)
