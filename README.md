@@ -18,10 +18,6 @@ This API has been built as a side-project (as an alternative to conventional quo
 https://api.statistron.xyz/v1/wikistats
 ```
 
-### Rate Limit
-
-There is a rate limit of **100 requests per minute**, per IP address. Exceeding this can result in a `429` error. 
-
 
 <br>
 
@@ -55,7 +51,7 @@ There is a rate limit of **100 requests per minute**, per IP address. Exceeding 
 GET /?q=random&limit=your_integer_value
 ```
 
-Returns one or more random quote(s) from the database as an array of JSON objects.  You must specify the limit parameter e.g., 1, 10, etc.
+Returns one or more random quote(s) from the database as an array of JSON objects.  You must specify the limit parameter.  The limit parameter must be less than 50.
                                    
 <br>
 
@@ -186,6 +182,15 @@ Results:
 <br>
 
 ---
+
+<br>
+
+### Rate Limit
+
+There is a rate limit of **100 requests per minute**, per IP address. Exceeding this can result in a `429` error. 
+
+---
+
 
 ### Credits
 
