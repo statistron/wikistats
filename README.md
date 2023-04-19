@@ -3,7 +3,7 @@
 <h1>wikistats</h1>
 
 
-<h2>Quotes API with statistics from Wikipedia</h2>
+<h2>Random Quotes API with statistics from Wikipedia</h2>
 
 
 wikistats is a free and open source API that provides statistics-related sentences (or quotes) from the Simple English version of Wikipedia.\
