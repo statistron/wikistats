@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const button = document.querySelector("button");
 
   async function refreshQuote() {
-    var url = "https://api.statistron.xyz/v1/wikistats?q=bulk";
+    var url = "https://api.statistron.xyz/v1/wikistats?q=random&limit=5";
+    //change value of limit parameter as needed
+    //max limit value is 50 quotes per request
     fetch(url)
       .then((response) => response.json())
       .then((jsonstat) => {
