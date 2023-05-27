@@ -151,7 +151,7 @@ This endpoint allows you to search through quotes.  It uses OpenSearch.  It retu
 
 **Examples**
 
-Search for "catalyst" [try in browser](https://api.statistron.xyz/v1/wikistats?q=bulk)
+Search for "catalyst" [try in browser](https://api.statistron.xyz/v1/wikistats?q=catalyst)
 
 ```HTTP
 GET /search/quotes?query=catalyst
